@@ -6,6 +6,7 @@ import {
   FaLinkedin,
   FaEnvelope,
   FaDownload,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 
 function RevealSection({
@@ -165,30 +166,50 @@ export default function Home() {
             expenses. Built a simple and user-friendly interface for recording
             and tracking transactions.
           </p>
-          <a
-            href="https://github.com/koshik7"
-            target="_blank"
-            rel="noreferrer"
-            className="btn"
-          >
-            View Project
-          </a>
+          <div className="projectLinks">
+            <a
+              href="https://personal-expense-tracker-007.streamlit.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="btn"
+            >
+              <FaExternalLinkAlt /> Live Demo
+            </a>
+            <a
+              href="https://github.com/koshik7"
+              target="_blank"
+              rel="noreferrer"
+              className="btn"
+            >
+              <FaGithub /> GitHub
+            </a>
+          </div>
         </div>
 
         <div className="project-card">
-          <h3>AI Study App</h3>
+          <h3>AI Study Assistant</h3>
           <p>
             Built an AI-based study app to support learning and revision. Used
             AI tools to improve the learning experience and productivity.
           </p>
-          <a
-            href="https://github.com/koshik7"
-            target="_blank"
-            rel="noreferrer"
-            className="btn"
-          >
-            View Project
-          </a>
+          <div className="projectLinks">
+            <a
+              href="https://studyassistantai.streamlit.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="btn"
+            >
+              <FaExternalLinkAlt /> Live Demo
+            </a>
+            <a
+              href="https://github.com/koshik7"
+              target="_blank"
+              rel="noreferrer"
+              className="btn"
+            >
+              <FaGithub /> GitHub
+            </a>
+          </div>
         </div>
       </RevealSection>
 
