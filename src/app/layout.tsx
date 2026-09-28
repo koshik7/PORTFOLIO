@@ -1,8 +1,19 @@
-export default function Home() {
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "My Portfolio",
+  description: "A simple portfolio website",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <main>
-      <h1>My Portfolio</h1>
-      <p>Hello, I make websites.</p>
-    </main>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   );
 }
