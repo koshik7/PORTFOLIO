@@ -173,15 +173,7 @@ export default function Home() {
               rel="noreferrer"
               className="btn"
             >
-              <FaExternalLinkAlt /> Live Demo
-            </a>
-            <a
-              href="https://github.com/koshik7"
-              target="_blank"
-              rel="noreferrer"
-              className="btn"
-            >
-              <FaGithub /> GitHub
+              <FaExternalLinkAlt /> Project Link
             </a>
           </div>
         </div>
@@ -199,15 +191,7 @@ export default function Home() {
               rel="noreferrer"
               className="btn"
             >
-              <FaExternalLinkAlt /> Live Demo
-            </a>
-            <a
-              href="https://github.com/koshik7"
-              target="_blank"
-              rel="noreferrer"
-              className="btn"
-            >
-              <FaGithub /> GitHub
+              <FaExternalLinkAlt /> Project Link
             </a>
           </div>
         </div>
