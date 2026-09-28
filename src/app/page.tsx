@@ -88,7 +88,7 @@ export default function Home() {
 
         <div className="socials">
           <a href="mailto:koshikray777@gmail.com">
-            <FaEnvelope /> Email
+            <FaEnvelope /> Gmail
           </a>
           <a
             href="https://www.linkedin.com/in/koshik-ray-929656436"
@@ -131,15 +131,8 @@ export default function Home() {
           <div className="timelineItem">
             <span className="dot" />
             <div>
-              <h3>Class 12 CBSE</h3>
-              <p>84.5%</p>
-            </div>
-          </div>
-          <div className="timelineItem">
-            <span className="dot" />
-            <div>
-              <h3>Class 10 CBSE</h3>
-              <p>76.6%</p>
+              <h3>PM SHRI Kendriya Vidyalaya Berhampore</h3>
+              <p>Previous School</p>
             </div>
           </div>
         </div>
