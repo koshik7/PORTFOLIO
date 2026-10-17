@@ -24,18 +24,19 @@ function RevealSection({
 }
 
 const skills = [
-  { name: "Python", level: 80 },
-  { name: "AI Tools Usage", level: 75 },
-  { name: "Basic Programming", level: 78 },
-  { name: "Problem Solving", level: 70 },
-  { name: "Teamwork", level: 85 },
-  { name: "Communication", level: 82 },
-  { name: "Fast Learner", level: 90 },
+  { name: "Python" },
+  { name: "AI Tools Usage" },
+  { name: "Basic Programming" },
+  { name: "Problem Solving" },
+  { name: "Teamwork" },
+  { name: "Communication" },
+  { name: "Fast Learner" },
 ];
 
 export default function Home() {
   const [dark, setDark] = useState(true);
   const [photo, setPhoto] = useState<string | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle("light", !dark);
@@ -49,16 +50,37 @@ export default function Home() {
           <span>Koshik Ray</span>
         </div>
 
-        <nav>
-          <a href="#about">About</a>
-          <a href="#education">Education</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+        <button
+          className="menuToggle"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+
+        <nav className={menuOpen ? "nav open" : "nav"}>
+          <a href="#about" onClick={() => setMenuOpen(false)}>
+            About
+          </a>
+          <a href="#education" onClick={() => setMenuOpen(false)}>
+            Education
+          </a>
+          <a href="#skills" onClick={() => setMenuOpen(false)}>
+            Skills
+          </a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>
+            Projects
+          </a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>
+            Contact
+          </a>
         </nav>
 
         <button className="themeBtn" onClick={() => setDark((v) => !v)}>
-          {dark ? "Light Mode" : "Dark Mode"}
+          <span className="toggleTrack">
+            <span className={dark ? "toggleThumb dark" : "toggleThumb"} />
+          </span>
+          <span>{dark ? "Dark" : "Light"}</span>
         </button>
       </header>
 
@@ -146,10 +168,6 @@ export default function Home() {
             <div key={skill.name} className="skillItem">
               <div className="skillTop">
                 <span>{skill.name}</span>
-                <span>{skill.level}%</span>
-              </div>
-              <div className="bar">
-                <div className="fill" style={{ width: `${skill.level}%` }} />
               </div>
             </div>
           ))}
@@ -198,13 +216,6 @@ export default function Home() {
       </RevealSection>
 
       <RevealSection>
-        <h2>Certifications</h2>
-        <ul>
-          <li>NCC Certificate</li>
-        </ul>
-      </RevealSection>
-
-      <RevealSection>
         <h2>Interests</h2>
         <div className="tags">
           <span>Gaming</span>
@@ -216,7 +227,9 @@ export default function Home() {
 
       <RevealSection id="contact">
         <h2>Contact</h2>
-        <p>Email: koshikray777@gmail.com</p>
+        <p>
+          Email: <a href="mailto:koshikray777@gmail.com">koshikray777@gmail.com</a>
+        </p>
       </RevealSection>
     </main>
   );
